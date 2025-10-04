@@ -168,7 +168,23 @@ If you created the IAM policy manually and want to remove it:
 ```powershell
 aws iam delete-policy --policy-arn arn:aws:iam::$AWS_ACCOUNT_ID:policy/AWSLoadBalancerControllerIAMPolicy
 ```
+OR, use below script to clean-up the entire project-
+Save this as cleanup-eks-2048.sh and run in Git Bash:
+How to use:
 
+Replace <YOUR_AWS_ACCOUNT_ID> with your actual AWS account ID in IAM_POLICY_ARN.
+
+Make the script executable:
+```powershell
+chmod +x cleanup-eks-2048.sh
+
+```
+Run
+```powershell
+./cleanup-eks-2048.sh
+
+
+```
 ## Troubleshooting
 
 - If the ALB isn't created, check the ALB controller logs:
